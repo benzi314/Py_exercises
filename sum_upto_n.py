@@ -1,4 +1,4 @@
-# sum upto first n natural numbers
+# sum upto first n natural numbers by using loop and formulae
 
 sum = 0.0
 n = int(input("enter the number:"))
