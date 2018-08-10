@@ -1,21 +1,27 @@
-# rock paper scissor game
-usr_a = input("Enter your choice A:")
-usr_b = input ("Enter your choice B:")
-print("A choose " + usr_a)
-print("B choose " + usr_b)
-while usr_a == "rock":
-        if usr_b == "scissor":
-            print("A beats B")
-        elif usr_b == "paper":
-            print("B beats A")
-        elif usr_b == "rock":
-            print("Match is draw")
-        break
-while usr_b == "rock":
-        if usr_a == "scissor":
-            print("B beats A")
-        elif usr_a == "paper":
-            print("A beats B")
-        elif usr_a == "rock":
-            print("Match is draw")
-        break
+# this is a rock paper scissor game
+usr_a = input("Your name A:")
+usr_b = input("Your name B:")
+c1 = input(usr_a+ ", Select rock paper or scissor:")
+c2 = input(usr_b+ ", Select rock paper or scissor:")
+def game(c1,c2):
+    if c1 == c2:
+        return("Match is draw")
+    elif c1 == "rock":
+        if c2 == "scissor":
+            return(usr_a + "wins" + usr_b)
+        else:
+            return (usr_b + "wins" + usr_a)
+    elif c1 == "scissor":
+        if c2 == paper:
+            return(usr_a + "wins" + usr_b)
+        else:
+            return (usr_b + "wins" + usr_a)
+    elif c1 == "paper":
+        if c2 == "rock":
+            return(usr_a + " wins " + usr_b)
+        else:
+            return (usr_b + " wins " + usr_a)
+    else:
+        return("You have given invalid inputs: TRY AGAIN")
+    return
+print(game(c1,c2))
